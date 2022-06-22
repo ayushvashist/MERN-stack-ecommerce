@@ -11,7 +11,7 @@ var cors = require('cors');
 
 // console.log()
 //db connect 
-app.use(cors({origin:'*'}));
+app.use(cors({origin:'*',methords:['GET', 'POST', 'PUT', 'DELETE','PATCH']}));
 
 console.log(process.env.MONGODB_URI );
 mongoose.connect(process.env.MONGODB_URI ? process.env.MONGODB_URI : 'mongodb://localhost/mern_ecommerce', {
