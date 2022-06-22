@@ -7,9 +7,11 @@ const userRouter = require('./routes/userRouter');
 const productRouter = require('./routes/productRouter');
 const orderRouter = require('./routes/orderRouter');
 const app = express();
+var cors = require('cors');
 
 // console.log()
 //db connect 
+app.use(cors({origin:'*'}));
 
 console.log(process.env.MONGODB_URI );
 mongoose.connect(process.env.MONGODB_URI ? process.env.MONGODB_URI : 'mongodb://localhost/mern_ecommerce', {
