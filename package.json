@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "engines": {
+    "node": "16.14.2"
+  },
   "scripts": {
-    "start": "node server/server.js",
     "lint": "eslint client/src/**/*.jsx  client/src/**/*.js server/**/*.js",
     "lint:fix": "eslint client/src/**/*.jsx --fix client/src/**/*.js --fix server/**/*.js --fix",
     "test:server": "jest --watch"
