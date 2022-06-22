@@ -5,8 +5,6 @@
   "license": "MIT",
   "scripts": {
     "start": "node server/server.js",
-    "build": "npm run build",
-    "heroku-postbuild": "npm run build",
     "lint": "eslint client/src/**/*.jsx  client/src/**/*.js server/**/*.js",
     "lint:fix": "eslint client/src/**/*.jsx --fix client/src/**/*.js --fix server/**/*.js --fix",
     "test:server": "jest --watch"
