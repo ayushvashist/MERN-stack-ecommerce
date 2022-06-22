@@ -1,18 +1,22 @@
 require('dotenv').config({ path: __dirname + '/.env' });
 const express = require('express');
 const path = require('path');
+const mongodb=require('mongodb');
 const mongoose = require('mongoose');
 const userRouter = require('./routes/userRouter');
 const productRouter = require('./routes/productRouter');
 const orderRouter = require('./routes/orderRouter');
 const app = express();
 
+// console.log()
 //db connect 
-// console.log(process.env.MONGODB_URI );
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/mern_ecommerce', {
+
+console.log(process.env.MONGODB_URI );
+mongoose.connect(process.env.MONGODB_URI ? process.env.MONGODB_URI : 'mongodb://localhost/mern_ecommerce', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
+    dbName:'mern_ecommerce'
 });
 
 const PORT = process.env.PORT || 8080;

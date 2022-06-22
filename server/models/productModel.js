@@ -4,40 +4,40 @@ const productSchema = new mongoose.Schema(
     {
         name: { 
             type: String, 
-            required: 'Name is required',
+            required: true,
             unique: true
         }, 
         image: {
             type: String,
-            require: 'Image is required'
+            require: true
         },
         brand: { 
             type: String, 
-            required: 'Brand is required'
+            required: true
         }, 
         category: {
             type: String,
-            required: 'Category is required'
+            required: true
         },
         description: {
             type: String,
-            required: 'Description is required'
+            required: true
         },
         price: { 
             type: Number, 
-            required: 'Price is required'
+            required: true
         }, 
         countInStock: { 
             type: Number, 
-            required: 'CountInStock is required'
+            required: true
         }, 
         rating: { 
             type: Number, 
-            required: 'Rating is required'
+            required: true
         }, 
         numReviews: { 
             type: Number, 
-            required: 'Number of Review is required'
+            required: true
         }, 
     }, 
     {

@@ -35,7 +35,7 @@ function App () {
                 <header className='row'>
                     <div>
                         <Link className='brand' to='/'>
-							Zankoo
+							E-Commerce
                         </Link>
                     </div>
                     <div>

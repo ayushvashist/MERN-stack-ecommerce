@@ -19,12 +19,14 @@ productRouter.get(
 // get all products /api/products/
 productRouter.get('/', expressAsyncHandler(async (req, res) => {
     const products = await Product.find({});
+    console.log(products)
     res.send( products );
 }));
 
 // temp product api/product route 
 productRouter.get('/:id', expressAsyncHandler(async (req, res) => {
     const product = await Product.findById(req.params.id);
+    console.log(product)
     //check condition
     if(product) {
         res.send(product);
